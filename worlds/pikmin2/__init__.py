@@ -56,6 +56,10 @@ class Pikmin2World(World):
         return Item(name,
                     item_table[name].classification,
                     item_id, self.player)
-    
+        
+    def set_rules(self) -> None:
+        self.multiworld.completion_condition[self.player] = lambda state: state.has("Victory", self.player)
+
     def generate_basic(self):
         pass
+        
