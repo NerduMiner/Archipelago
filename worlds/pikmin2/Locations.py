@@ -230,5 +230,7 @@ def get_locations(multiworld: Optional[MultiWorld], player: Optional[int]) -> Tu
         LocationData(LocationName.vor_region1, LocationName.vor_onion1, baseID+201),
         LocationData(LocationName.aw_region3, LocationName.aw_onion1, baseID+202),
         LocationData(LocationName.pp_region3, LocationName.pp_onion1, baseID+203),
+        # Victory Location
+        LocationData("Victory", "Debt Payment Completion", baseID+204),
     }
     return tuple(location_table)

@@ -62,4 +62,7 @@ class Pikmin2World(World):
 
     def generate_basic(self):
         pass
+
+    def generate_output(self) -> None:
+        pass
         

@@ -236,15 +236,21 @@ onions = {
     ItemName.onion_white: ItemData(baseID+205, ItemClassification.progression),
 }
 
+misc = {
+    ItemName.victory: ItemData(baseID+206, ItemClassification.progression),
+}
+
 item_table = {
     **treasures,
     **explorers_kit,
     **titan_dweevil,
+    **misc,
 }
 
 item_groups: typing.Dict[str, str] = {
     "Treasures": [item_name for item_name in treasures.items()],
     "Explorer's Kit": [item_name for item_name in explorers_kit.items()],
     "Titan Dweevil": [item_name for item_name in titan_dweevil.items()],
-    "Onions": [item_name for item_name in onions.items()]
+    "Onions": [item_name for item_name in onions.items()],
+    "Victory": [item_name for item_name in misc.items()]
     }

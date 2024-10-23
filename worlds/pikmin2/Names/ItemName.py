@@ -207,3 +207,5 @@ onion_yellow = "Blue Onion"
 onion_blue = "Yellow Onion"
 onion_purple = "Purple Pikmin"
 onion_white = "White Pikmin"
+# Misc
+victory = "Victory: Debt Payment"
