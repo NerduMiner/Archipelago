@@ -167,11 +167,11 @@ def get_locations(multiworld: Optional[MultiWorld], player: Optional[int]) -> Tu
         LocationData(LocationName.sr_region, LocationName.sr_sub6_tre3, baseID+130),
         LocationData(LocationName.sr_region, LocationName.sr_sub7_tre1, baseID+131),
         # WW
-        LocationData(LocationName.ww_region1, LocationName.ww_tre1+145),
-        LocationData(LocationName.ww_region2, LocationName.ww_tre1+146),
-        LocationData(LocationName.ww_region3, LocationName.ww_tre1+147),
-        LocationData(LocationName.ww_region4, LocationName.ww_tre1+148),
-        LocationData(LocationName.ww_region4, LocationName.ww_tre1+149),
+        LocationData(LocationName.ww_region1, LocationName.ww_tre1, baseID+145),
+        LocationData(LocationName.ww_region2, LocationName.ww_tre1, baseID+146),
+        LocationData(LocationName.ww_region3, LocationName.ww_tre1, baseID+147),
+        LocationData(LocationName.ww_region4, LocationName.ww_tre1, baseID+148),
+        LocationData(LocationName.ww_region4, LocationName.ww_tre1, baseID+149),
         # Cavern of Chaos
         LocationData(LocationName.coc_region, LocationName.coc_sub1_tre1, baseID+150),
         LocationData(LocationName.coc_region, LocationName.coc_sub1_tre2, baseID+151),
