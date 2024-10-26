@@ -4,6 +4,7 @@ from BaseClasses import Item, MultiWorld, Location, Tutorial, ItemClassification
 from .Items import item_table, item_groups
 from .Locations import get_locations
 from .Regions import create_regions
+from .Options import Pikmin2Options
 from ..AutoWorld import World, WebWorld
 
 class Pikmin2WebWorld(WebWorld):
@@ -35,6 +36,9 @@ class Pikmin2World(World):
     location_name_to_id = {location.name: location.code for location in get_locations(None, None)}    
     item_name_groups = item_groups
 
+    options_dataclass = Pikmin2Options
+    options: Pikmin2Options
+
     def __init__(self, multiworld: MultiWorld, player: int):
         super().__init__(multiworld, player)
     
@@ -44,7 +48,7 @@ class Pikmin2World(World):
     def create_items(self):
         pool: List[Item] = []
         for name, data in item_table.items():
-            for _ in range(data.count):
+            for _ in data:
                 item = self.create_item(name)
                 pool.append(item)
         

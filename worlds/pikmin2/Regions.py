@@ -8,8 +8,8 @@ from worlds.generic.Rules import add_rule
 # Our Base ID, we will reserve this and the following 200 ids for our locations
 baseID = 25000
 
-def create_regions(multiworld: MultiWorld, player: int, locations: LocationData, location_cache: List[Location]):
-    locations_per_region = get_locations_per_region(locations)
+def create_regions(multiworld: MultiWorld, player: int, location_cache: List[Location]):
+    locations_per_region = get_locations_per_region(location_cache)
 
     regions = [
         create_region(multiworld, player, locations_per_region, location_cache, 'Menu'),

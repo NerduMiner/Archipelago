@@ -8,7 +8,7 @@ baseID = 25000
 
 class ItemData(typing.NamedTuple):
     code: typing.Optional[int]
-    progression: ItemClassification
+    classification: ItemClassification
 
 class Pikmin2Item(Item):
     game: str = "Pikmin 2"

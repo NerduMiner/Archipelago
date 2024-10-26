@@ -18,7 +18,7 @@ class LocationData(NamedTuple):
     code: Optional[int]
     rule: Callable = lambda state: True
 
-def get_locations(multiworld: Optional[MultiWorld], player: Optional[int]) -> Tuple[LocationData, ...]:
+def get_locations(multiworld: Optional[MultiWorld], player: Optional[int]) -> List[LocationData]:
     location_table: List[LocationData] = {
         # Valley of Repose
         LocationData(LocationName.vor_region1, LocationName.vor_tre1, baseID),
@@ -168,10 +168,10 @@ def get_locations(multiworld: Optional[MultiWorld], player: Optional[int]) -> Tu
         LocationData(LocationName.sr_region, LocationName.sr_sub7_tre1, baseID+131),
         # WW
         LocationData(LocationName.ww_region1, LocationName.ww_tre1, baseID+145),
-        LocationData(LocationName.ww_region2, LocationName.ww_tre1, baseID+146),
-        LocationData(LocationName.ww_region3, LocationName.ww_tre1, baseID+147),
-        LocationData(LocationName.ww_region4, LocationName.ww_tre1, baseID+148),
-        LocationData(LocationName.ww_region4, LocationName.ww_tre1, baseID+149),
+        LocationData(LocationName.ww_region2, LocationName.ww_tre2, baseID+146),
+        LocationData(LocationName.ww_region3, LocationName.ww_tre3, baseID+147),
+        LocationData(LocationName.ww_region4, LocationName.ww_tre4, baseID+148),
+        LocationData(LocationName.ww_region4, LocationName.ww_tre5, baseID+149),
         # Cavern of Chaos
         LocationData(LocationName.coc_region, LocationName.coc_sub1_tre1, baseID+150),
         LocationData(LocationName.coc_region, LocationName.coc_sub1_tre2, baseID+151),
@@ -214,7 +214,7 @@ def get_locations(multiworld: Optional[MultiWorld], player: Optional[int]) -> Tu
         LocationData(LocationName.dd_region, LocationName.dd_sub6_tre1, baseID+186),
         LocationData(LocationName.dd_region, LocationName.dd_sub7_tre1, baseID+187),
         LocationData(LocationName.dd_region, LocationName.dd_sub8_tre1, baseID+188),
-        LocationData(LocationName.dd_region, LocationName.dd_sub8_tre1, baseID+189),
+        LocationData(LocationName.dd_region, LocationName.dd_sub8_tre2, baseID+189),
         LocationData(LocationName.dd_region, LocationName.dd_sub10_tre1, baseID+190),
         LocationData(LocationName.dd_region, LocationName.dd_sub11_tre1, baseID+191),
         LocationData(LocationName.dd_region, LocationName.dd_sub11_tre2, baseID+192),
@@ -233,4 +233,4 @@ def get_locations(multiworld: Optional[MultiWorld], player: Optional[int]) -> Tu
         # Victory Location
         LocationData("Victory", "Debt Payment Completion", baseID+204),
     }
-    return tuple(location_table)
+    return list(location_table)
