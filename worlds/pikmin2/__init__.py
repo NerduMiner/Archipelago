@@ -48,9 +48,8 @@ class Pikmin2World(World):
     def create_items(self):
         pool: List[Item] = []
         for name, data in item_table.items():
-            for _ in data:
-                item = self.create_item(name)
-                pool.append(item)
+            item = self.create_item(name)
+            pool.append(item)
         
         self.multiworld.itempool += pool
     
