@@ -61,7 +61,7 @@ def create_regions(multiworld: MultiWorld, player: int, location_cache: List[Loc
     connect(multiworld, player, ('Menu -> ' + LocationName.ww_region1), 'Menu', LocationName.ww_region1, lambda state: state.has(ItemName.the_key, player))
     # Valley of Repose
     connect(multiworld, player, (LocationName.vor_region1 + ' -> ' + LocationName.vor_region2), LocationName.vor_region1, LocationName.vor_region2, lambda state: state.has(ItemName.onion_blue, player))
-    connect(multiworld, player, (LocationName.vor_region1 + ' -> ' + LocationName.ec_region), LocationName.vor_region1, LocationName.ec_region)
+    connect(multiworld, player, (LocationName.vor_region1 + ' -> ' + LocationName.ec_region), LocationName.vor_region1, LocationName.ec_region, lambda state: state.has(ItemName.onion_red, player) or state.has(ItemName.onion_yellow, player) or state.has(ItemName.onion_white, player) or state.has(ItemName.onion_purple, player) or state.has(ItemName.onion_blue, player))
     connect(multiworld, player, (LocationName.vor_region2 + ' -> ' + LocationName.vor_region3), LocationName.vor_region2, LocationName.vor_region3, lambda state: state.has(ItemName.onion_white, player))
     connect(multiworld, player, (LocationName.vor_region2 + ' -> ' + LocationName.fc_region), LocationName.vor_region2, LocationName.fc_region)
     connect(multiworld, player, (LocationName.vor_region3 + ' -> ' + LocationName.scx_region), LocationName.vor_region3, LocationName.scx_region)
@@ -85,7 +85,7 @@ def create_regions(multiworld: MultiWorld, player: int, location_cache: List[Loc
     connect(multiworld, player, (LocationName.pp_region1 + ' -> ' + LocationName.pp_region6), LocationName.pp_region1, LocationName.pp_region6, lambda state: state.has(ItemName.onion_blue, player))
     connect(multiworld, player, (LocationName.pp_region1 + ' -> ' + LocationName.pp_region7), LocationName.pp_region1, LocationName.pp_region7, lambda state: state.has(ItemName.onion_blue, player))
     connect(multiworld, player, (LocationName.pp_region1 + ' -> ' + LocationName.cos_region), LocationName.pp_region1, LocationName.cos_region)
-    connect(multiworld, player, (LocationName.pp_region2 + ' -> ' + LocationName.sh_region), LocationName.pp_region2, LocationName.sh_region)
+    connect(multiworld, player, (LocationName.pp_region2 + ' -> ' + LocationName.sr_region), LocationName.pp_region2, LocationName.sr_region)
     connect(multiworld, player, (LocationName.pp_region4 + ' -> ' + LocationName.gk_region), LocationName.pp_region4, LocationName.gk_region)
     connect(multiworld, player, (LocationName.pp_region7 + ' -> ' + LocationName.sc_region), LocationName.pp_region7, LocationName.sc_region)
     # Wistful Wild

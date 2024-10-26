@@ -27,12 +27,13 @@ def get_locations(multiworld: Optional[MultiWorld], player: Optional[int]) -> Li
         LocationData(LocationName.vor_region1, LocationName.vor_tre3, baseID+2, rule=lambda state: state.has(ItemName.onion_white, player)),
         LocationData(LocationName.vor_region1, LocationName.vor_tre4, baseID+3, rule=lambda state: state.has(ItemName.onion_white, player) and state.has(ItemName.onion_blue, player)),
         LocationData(LocationName.vor_region2, LocationName.vor_tre5, baseID+4),
-        LocationData(LocationName.vor_region2, LocationName.vor_tre6, baseID+5, rule=lambda state: state.has(ItemName.onion_blue)),
+        LocationData(LocationName.vor_region2, LocationName.vor_tre6, baseID+5, rule=lambda state: state.has(ItemName.onion_blue, player)),
         LocationData(LocationName.vor_region2, LocationName.vor_tre7, baseID+6),
         # Emergence Cave
         LocationData(LocationName.ec_region, LocationName.ec_sub1_tre1, baseID+7),
         LocationData(LocationName.ec_region, LocationName.ec_sub1_tre2, baseID+8),
         LocationData(LocationName.ec_region, LocationName.ec_sub2_tre1, baseID+9),
+        LocationData(LocationName.ec_region, LocationName.ec_onion, baseID+205),
         # Subterranean Complex
         LocationData(LocationName.scx_region, LocationName.scx_sub1_tre1, baseID+10),
         LocationData(LocationName.scx_region, LocationName.scx_sub1_tre2, baseID+11),
@@ -89,6 +90,7 @@ def get_locations(multiworld: Optional[MultiWorld], player: Optional[int]) -> Li
         LocationData(LocationName.wfg_region, LocationName.wfg_sub4_tre1, baseID+58),
         LocationData(LocationName.wfg_region, LocationName.wfg_sub4_tre2, baseID+59),
         LocationData(LocationName.wfg_region, LocationName.wfg_sub5_tre1, baseID+60),
+        LocationData(LocationName.wfg_region, LocationName.wfg_onion, baseID+206),
         # Bulblax Kingdom
         LocationData(LocationName.bk_region, LocationName.bk_sub1_tre1, baseID+61),
         LocationData(LocationName.bk_region, LocationName.bk_sub2_tre1, baseID+62),
@@ -166,6 +168,20 @@ def get_locations(multiworld: Optional[MultiWorld], player: Optional[int]) -> Li
         LocationData(LocationName.sr_region, LocationName.sr_sub6_tre2, baseID+129),
         LocationData(LocationName.sr_region, LocationName.sr_sub6_tre3, baseID+130),
         LocationData(LocationName.sr_region, LocationName.sr_sub7_tre1, baseID+131),
+        # Submerged Castle
+        LocationData(LocationName.sc_region, LocationName.sc_sub1_tre1, baseID+132),
+        LocationData(LocationName.sc_region, LocationName.sc_sub1_tre2, baseID+133),
+        LocationData(LocationName.sc_region, LocationName.sc_sub1_tre3, baseID+134),
+        LocationData(LocationName.sc_region, LocationName.sc_sub2_tre1, baseID+135),
+        LocationData(LocationName.sc_region, LocationName.sc_sub2_tre2, baseID+136),
+        LocationData(LocationName.sc_region, LocationName.sc_sub2_tre3, baseID+137),
+        LocationData(LocationName.sc_region, LocationName.sc_sub3_tre1, baseID+138),
+        LocationData(LocationName.sc_region, LocationName.sc_sub3_tre2, baseID+139),
+        LocationData(LocationName.sc_region, LocationName.sc_sub3_tre3, baseID+140),
+        LocationData(LocationName.sc_region, LocationName.sc_sub4_tre1, baseID+141),
+        LocationData(LocationName.sc_region, LocationName.sc_sub4_tre2, baseID+142),
+        LocationData(LocationName.sc_region, LocationName.sc_sub4_tre3, baseID+143),
+        LocationData(LocationName.sc_region, LocationName.sc_sub5_tre1, baseID+144),
         # WW
         LocationData(LocationName.ww_region1, LocationName.ww_tre1, baseID+145),
         LocationData(LocationName.ww_region2, LocationName.ww_tre2, baseID+146),
@@ -231,6 +247,6 @@ def get_locations(multiworld: Optional[MultiWorld], player: Optional[int]) -> Li
         LocationData(LocationName.aw_region3, LocationName.aw_onion1, baseID+202),
         LocationData(LocationName.pp_region3, LocationName.pp_onion1, baseID+203),
         # Victory Location
-        LocationData("Victory", "Debt Payment Completion", baseID+204),
+        #LocationData("Victory", "Debt Payment Completion", baseID+204),
     }
     return list(location_table)

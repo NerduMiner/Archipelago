@@ -5,6 +5,7 @@ from .Items import item_table, item_groups
 from .Locations import get_locations
 from .Regions import create_regions
 from .Options import Pikmin2Options
+from .Rules import set_rules
 from ..AutoWorld import World, WebWorld
 
 class Pikmin2WebWorld(WebWorld):
@@ -61,11 +62,11 @@ class Pikmin2World(World):
                     item_id, self.player)
         
     def set_rules(self) -> None:
-        self.multiworld.completion_condition[self.player] = lambda state: state.has("Victory", self.player)
+        set_rules(self.multiworld, self.player)
 
     def generate_basic(self):
         pass
 
-    def generate_output(self) -> None:
+    def generate_output(self, output_directory: str) -> None:
         pass
         

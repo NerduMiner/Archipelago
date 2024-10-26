@@ -244,7 +244,8 @@ item_table = {
     **treasures,
     **explorers_kit,
     **titan_dweevil,
-    **misc,
+    **onions,
+    #**misc,
 }
 
 item_groups: typing.Dict[str, str] = {
