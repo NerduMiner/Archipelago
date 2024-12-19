@@ -1,6 +1,6 @@
 from typing import Any, Dict, List, Set, Tuple, TextIO
 
-from BaseClasses import Item, MultiWorld, Location, Tutorial, ItemClassification
+from BaseClasses import Item, MultiWorld, Location, Tutorial, ItemClassification, CollectionState
 from .Items import item_table, item_groups
 from .Locations import get_locations
 from .Regions import create_regions
@@ -60,7 +60,27 @@ class Pikmin2World(World):
         return Item(name,
                     item_table[name].classification,
                     item_id, self.player)
+
+    # In Pikmin 2, Treasures have a value in "Pokos"
+    # Debt Repayed goals require us to track the amount of money we currently have collected
+    def collect(self, state: CollectionState, item: Item) -> bool:
+        value = super().collect(state, item)
+
+        if item.name in item_table:
+            state.prog_items[self.player]["Pokos"] += item_table[item.name].value
+
+        return value
+    
+    def remove(self, state: CollectionState, item: Item) -> bool:
+        value = super().remove(state, item)
+
+        if item.name in item_table:
+           state.prog_items[self.player]["Pokos"] -= item_table[item.name].value
+           if not state.prog_items[self.player]["Pokos"]:
+               del state.prog_items[self.player]["Pokos"]
         
+        return value
+
     def set_rules(self) -> None:
         set_rules(self.multiworld, self.player)
 
