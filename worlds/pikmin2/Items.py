@@ -226,7 +226,7 @@ titan_dweevil = {
     ItemName.flare_cannon: ItemData(baseID+197, ItemClassification.progression, 1000),
     ItemName.comedy_bomb: ItemData(baseID+198, ItemClassification.progression, 1000),
     ItemName.monster_pump: ItemData(baseID+199, ItemClassification.progression, 1000),
-    ItemName.king_of_bugs: ItemData(baseID+200, ItemClassification.progression, 1000),
+    ItemName.king_of_bugs: ItemData(baseID+200, ItemClassification.progression, 10),
 }
 
 onions = {
