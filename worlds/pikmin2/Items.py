@@ -250,9 +250,9 @@ item_table = {
 }
 
 item_groups: typing.Dict[str, str] = {
-    "Treasures": [item_name for item_name in treasures.items()],
-    "Explorer's Kit": [item_name for item_name in explorers_kit.items()],
-    "Titan Dweevil": [item_name for item_name in titan_dweevil.items()],
-    "Onions": [item_name for item_name in onions.items()],
-    "Victory": [item_name for item_name in misc.items()]
+    "Treasures": [name for name, data in treasures.items()],
+    "Explorer's Kit": [name for name, data in explorers_kit.items()],
+    "Titan Dweevil": [name for name, data in titan_dweevil.items()],
+    "Onions": [name for name, data in onions.items()],
+    "Victory": [name for name, data in misc.items()]
     }
