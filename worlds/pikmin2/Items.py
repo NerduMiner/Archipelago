@@ -254,5 +254,5 @@ item_groups: typing.Dict[str, str] = {
     "Explorer's Kit": [name for name, data in explorers_kit.items()],
     "Titan Dweevil": [name for name, data in titan_dweevil.items()],
     "Onions": [name for name, data in onions.items()],
-    "Victory": [name for name, data in misc.items()]
+    #"Victory": [name for name, data in misc.items()]
     }
