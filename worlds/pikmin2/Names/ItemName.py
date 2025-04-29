@@ -203,8 +203,8 @@ professional_noisemaker = "Professional Noisemaker"
 the_key = "The Key"
 # Onions
 onion_red = "Red Onion"
-onion_yellow = "Blue Onion"
-onion_blue = "Yellow Onion"
+onion_yellow = "Yellow Onion"
+onion_blue = "Blue Onion"
 onion_purple = "Purple Pikmin"
 onion_white = "White Pikmin"
 # Misc
