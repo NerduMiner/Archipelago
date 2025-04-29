@@ -56,9 +56,9 @@ def create_regions(multiworld: MultiWorld, player: int, location_cache: List[Loc
     
     # World Map
     connect(multiworld, player, ('Menu -> ' + LocationName.vor_region1), 'Menu', LocationName.vor_region1)
-    connect(multiworld, player, ('Menu -> ' + LocationName.aw_region1), 'Menu', LocationName.aw_region1, lambda state: state.has(ItemName.spherical_atlas, player))
-    connect(multiworld, player, ('Menu -> ' + LocationName.pp_region1), 'Menu', LocationName.pp_region1, lambda state: state.has(ItemName.geographical_projection, player))
-    connect(multiworld, player, ('Menu -> ' + LocationName.ww_region1), 'Menu', LocationName.ww_region1, lambda state: state.has(ItemName.the_key, player))
+    connect(multiworld, player, ('Menu -> ' + LocationName.aw_region1), 'Menu', LocationName.aw_region1, lambda state: state.has(ItemName.spherical_atlas, player) and (state.has(ItemName.onion_red, player) or state.has(ItemName.onion_yellow, player) or state.has(ItemName.onion_white, player) or state.has(ItemName.onion_purple, player) or state.has(ItemName.onion_blue, player)))
+    connect(multiworld, player, ('Menu -> ' + LocationName.pp_region1), 'Menu', LocationName.pp_region1, lambda state: state.has(ItemName.geographical_projection, player) and (state.has(ItemName.onion_red, player) or state.has(ItemName.onion_yellow, player) or state.has(ItemName.onion_white, player) or state.has(ItemName.onion_purple, player) or state.has(ItemName.onion_blue, player)))
+    connect(multiworld, player, ('Menu -> ' + LocationName.ww_region1), 'Menu', LocationName.ww_region1, lambda state: state.has(ItemName.the_key, player) and (state.has(ItemName.onion_red, player) or state.has(ItemName.onion_yellow, player) or state.has(ItemName.onion_white, player) or state.has(ItemName.onion_purple, player) or state.has(ItemName.onion_blue, player)))
     # Valley of Repose
     connect(multiworld, player, (LocationName.vor_region1 + ' -> ' + LocationName.vor_region2), LocationName.vor_region1, LocationName.vor_region2, lambda state: state.has(ItemName.onion_blue, player))
     connect(multiworld, player, (LocationName.vor_region1 + ' -> ' + LocationName.ec_region), LocationName.vor_region1, LocationName.ec_region, lambda state: state.has(ItemName.onion_red, player) or state.has(ItemName.onion_yellow, player) or state.has(ItemName.onion_white, player) or state.has(ItemName.onion_purple, player) or state.has(ItemName.onion_blue, player))
